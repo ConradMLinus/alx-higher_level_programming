@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-
-def max_integer(my_list=[]):
-    if not my_list:  # Check if the list is empty
-        return (None)
-
-    max_num = my_list[0]
-    for num in my_list:
-        if num > max_num:
-            max_num = num
-
-    return (max_num)
+def divisible_by_2(my_list=[]):
+    checker = my_list.copy()
+    for i in my_list:
+        if i % 2 != 0:
+            checker[my_list.index(i)] = False
+        else:
+            checker[my_list.index(i)] = True
+    return (checker)
